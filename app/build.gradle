@@ -41,6 +41,6 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
     implementation project(':playerLibrary')
-    implementation project(':epf')
+    implementation project(':videoEditSdk')
 }
 
