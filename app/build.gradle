@@ -40,7 +40,7 @@ dependencies {
 
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
-    implementation project(':library')
+    implementation project(':playerLibrary')
     implementation project(':epf')
 }
 
