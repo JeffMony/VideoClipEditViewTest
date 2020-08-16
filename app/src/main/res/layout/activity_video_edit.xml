@@ -27,7 +27,7 @@
 
 
 
-    <com.daasuu.epf.GlPlayerView
+    <com.video.epf.GlPlayerView
         android:id="@+id/player_view_mp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

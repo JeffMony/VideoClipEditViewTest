@@ -1,6 +1,6 @@
 package com.video.egl;
 
-import com.daasuu.epf.filter.GlFilter;
+import com.video.epf.filter.GlFilter;
 
 import java.io.Serializable;
 

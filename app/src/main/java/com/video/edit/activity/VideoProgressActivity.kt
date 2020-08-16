@@ -5,12 +5,12 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.widget.Toast
-import com.daasuu.epf.custfilter.GlFlashFliter
-import com.daasuu.epf.custfilter.GlShakeFilter
-import com.daasuu.epf.filter.FilterType
+import com.video.epf.custfilter.GlFlashFliter
+import com.video.epf.custfilter.GlShakeFilter
+import com.video.epf.filter.FilterType
 import com.video.egl.GlFilterList
 import com.video.egl.GlFilterPeriod
-import com.daasuu.mp4compose.composer.Mp4Composer
+import com.video.mp4compose.composer.Mp4Composer
 import com.video.egl.VideoProcessConfig
 import kotlinx.android.synthetic.main.video_process_activity_layout.*
 

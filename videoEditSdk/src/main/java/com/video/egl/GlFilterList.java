@@ -2,8 +2,8 @@ package com.video.egl;
 
 import android.util.Log;
 
-import com.daasuu.epf.EFramebufferObject;
-import com.daasuu.epf.filter.GlFilter;
+import com.video.epf.EFramebufferObject;
+import com.video.epf.filter.GlFilter;
 
 import org.jetbrains.annotations.NotNull;
 

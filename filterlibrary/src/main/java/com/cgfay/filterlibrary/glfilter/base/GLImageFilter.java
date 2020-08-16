@@ -8,7 +8,7 @@ import android.text.TextUtils;
 
 import com.cgfay.filterlibrary.glfilter.utils.OpenGLUtils;
 import com.cgfay.filterlibrary.glfilter.utils.TextureRotationUtils;
-import com.daasuu.epf.filter.GlFilter;
+import com.video.epf.filter.GlFilter;
 
 import java.nio.FloatBuffer;
 import java.util.Arrays;

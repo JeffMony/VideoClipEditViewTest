@@ -10,13 +10,13 @@ import android.opengl.Matrix;
 import android.util.Log;
 import android.view.Surface;
 
-import com.daasuu.epf.EFramebufferObject;
-import com.daasuu.epf.filter.GlFilter;
-import com.daasuu.mp4compose.FillMode;
-import com.daasuu.mp4compose.FillModeCustomItem;
-import com.daasuu.mp4compose.Rotation;
-import com.daasuu.mp4compose.filter.GlComposeFilter;
-import com.daasuu.mp4compose.utils.GLESUtils;
+import com.video.epf.EFramebufferObject;
+import com.video.epf.filter.GlFilter;
+import com.video.mp4compose.FillMode;
+import com.video.mp4compose.FillModeCustomItem;
+import com.video.mp4compose.Rotation;
+import com.video.mp4compose.filter.GlComposeFilter;
+import com.video.mp4compose.utils.GLESUtils;
 
 import static android.opengl.GLES20.GL_COLOR_BUFFER_BIT;
 import static android.opengl.GLES20.GL_DEPTH_BUFFER_BIT;

@@ -5,7 +5,7 @@ import android.opengl.GLES30;
 
 import com.cgfay.filterlibrary.glfilter.base.GLImageFilter;
 import com.cgfay.filterlibrary.glfilter.utils.OpenGLUtils;
-import com.daasuu.epf.filter.GlFilter;
+import com.video.epf.filter.GlFilter;
 
 /**
  * 童话滤镜

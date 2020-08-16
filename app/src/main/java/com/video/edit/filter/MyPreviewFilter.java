@@ -4,7 +4,7 @@ import android.content.Context;
 import android.opengl.GLES20;
 import android.util.Log;
 
-import com.daasuu.epf.filter.GlPreviewFilter;
+import com.video.epf.filter.GlPreviewFilter;
 import com.video.edit.demo.R;
 import com.video.library.util.GlUtil;
 

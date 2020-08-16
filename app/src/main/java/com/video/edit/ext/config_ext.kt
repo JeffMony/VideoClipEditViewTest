@@ -2,8 +2,8 @@ package com.video.edit.ext
 
 import android.content.Context
 import com.video.egl.GLImageComplexionBeautyFilter
-import com.daasuu.epf.custfilter.*
-import com.daasuu.epf.filter.GlFilter
+import com.video.epf.custfilter.*
+import com.video.epf.filter.GlFilter
 import com.video.edit.demo.R
 import com.video.edit.view.BottomDialogFragment
 

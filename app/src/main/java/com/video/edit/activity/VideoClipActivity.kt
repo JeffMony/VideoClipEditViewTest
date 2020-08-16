@@ -10,10 +10,10 @@ import android.view.View
 import android.view.ViewTreeObserver
 import android.widget.SeekBar
 import android.widget.Toast
-import com.daasuu.epf.custfilter.GlFlashFliter
-import com.daasuu.epf.custfilter.GlShakeFilter
-import com.daasuu.epf.custfilter.GlSoulOutFilter
-import com.daasuu.mp4compose.composer.Mp4Composer
+import com.video.epf.custfilter.GlFlashFliter
+import com.video.epf.custfilter.GlShakeFilter
+import com.video.epf.custfilter.GlSoulOutFilter
+import com.video.mp4compose.composer.Mp4Composer
 import com.video.egl.GlFilterList
 import com.video.egl.GlFilterPeriod
 import com.video.library.log

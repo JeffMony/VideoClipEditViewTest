@@ -13,7 +13,7 @@ import android.view.TextureView;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.daasuu.epf.filter.GlFilter;
+import com.video.epf.filter.GlFilter;
 import com.video.library.player.mp.TextureSurfaceRenderer2;
 
 import java.io.IOException;

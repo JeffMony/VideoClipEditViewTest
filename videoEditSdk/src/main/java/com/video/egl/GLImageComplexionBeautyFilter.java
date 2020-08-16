@@ -4,8 +4,8 @@ import android.content.Context;
 import android.opengl.GLES30;
 import android.util.Log;
 
-import com.daasuu.epf.filter.FilterType;
-import com.daasuu.epf.filter.GlFilter;
+import com.video.epf.filter.FilterType;
+import com.video.epf.filter.GlFilter;
 import com.video.library.util.GlUtil;
 
 /**
