@@ -1,14 +1,12 @@
 package com.daasuu.epf.filter;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.opengl.GLES20;
 import android.opengl.GLES30;
 import android.opengl.GLUtils;
 import android.opengl.Matrix;
 import android.util.Log;
 
-import java.io.Serializable;
 import java.nio.FloatBuffer;
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +20,7 @@ import static android.opengl.GLES20.GL_VERTEX_SHADER;
 import static android.opengl.GLES20.glGetAttribLocation;
 import static android.opengl.GLES20.glGetUniformLocation;
 import static android.opengl.GLES20.glUseProgram;
-import static com.spx.library.util.GlUtil.raw;
+import static com.video.library.util.GlUtil.raw;
 
 /**
  * Created by sudamasayuki on 2017/05/16.

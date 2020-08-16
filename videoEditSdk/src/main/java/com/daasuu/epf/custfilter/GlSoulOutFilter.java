@@ -8,7 +8,7 @@ import com.daasuu.epf.R;
 import com.daasuu.epf.filter.FilterType;
 import com.daasuu.epf.filter.GlFilter;
 
-import static com.spx.library.util.GlUtil.raw;
+import static com.video.library.util.GlUtil.raw;
 
 public class GlSoulOutFilter extends GlFilter {
 

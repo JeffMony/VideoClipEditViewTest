@@ -7,7 +7,7 @@ import android.util.Log;
 import com.daasuu.epf.R;
 import com.daasuu.epf.filter.FilterType;
 import com.daasuu.epf.filter.GlFilter;
-import com.spx.library.util.GlUtil;
+import com.video.library.util.GlUtil;
 
 import java.util.Map;
 

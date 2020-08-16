@@ -59,7 +59,6 @@ abstract class EFrameBufferObjectRenderer implements GLSurfaceView.Renderer {
         if (useFBO) {
             framebufferObject.enable();
         }
-//
         GLES20.glViewport(0, 0, framebufferObject.getWidth(), framebufferObject.getHeight());
 
         onDrawFrame(framebufferObject);

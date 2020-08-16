@@ -8,8 +8,8 @@ import android.util.Log;
 import com.daasuu.epf.EFramebufferObject;
 import com.daasuu.epf.EglUtil;
 import com.daasuu.epf.filter.GlFilter;
-import com.daasuu.mp4compose.utils.GlUtils;
-import com.spx.egl.MagicJni;
+import com.daasuu.mp4compose.utils.GLESUtils;
+import com.video.egl.MagicJni;
 
 
 import java.util.HashMap;
@@ -106,7 +106,7 @@ public abstract class FrameBufferObjectOutputSurface implements SurfaceTexture.O
             return;
         }
         // Latch the data.
-        GlUtils.checkGlError("before updateTexImage");
+        GLESUtils.checkGlError("before updateTexImage");
         surfaceTexture.updateTexImage();
     }
 

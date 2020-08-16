@@ -1,6 +1,6 @@
 package com.daasuu.mp4compose.filter;
 
-import com.daasuu.mp4compose.utils.GlUtils;
+import com.daasuu.mp4compose.utils.GLESUtils;
 
 /**
  * Created by sudamasayuki on 2018/01/06.
@@ -18,7 +18,7 @@ public class GlInvertComposeFilter extends GlComposeFilter {
                     "}";
 
     public GlInvertComposeFilter() {
-        super(GlUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
+        super(GLESUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
     }
 }
 

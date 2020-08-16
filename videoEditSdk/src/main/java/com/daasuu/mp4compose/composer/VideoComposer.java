@@ -7,13 +7,13 @@ import android.media.MediaFormat;
 import android.util.Log;
 
 import com.daasuu.epf.filter.GlFilter;
-import com.spx.egl.GlFilterList;
+import com.video.egl.GlFilterList;
 import com.daasuu.mp4compose.FillMode;
 import com.daasuu.mp4compose.FillModeCustomItem;
-import com.spx.egl.Resolution;
+import com.video.egl.Resolution;
 import com.daasuu.mp4compose.Rotation;
-import com.spx.egl.DecoderOutputSurface;
-import com.spx.egl.EncoderSurface;
+import com.video.egl.DecoderOutputSurface;
+import com.video.egl.EncoderSurface;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

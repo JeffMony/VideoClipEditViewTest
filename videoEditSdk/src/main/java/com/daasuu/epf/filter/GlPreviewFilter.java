@@ -6,7 +6,7 @@ import android.opengl.GLUtils;
 import android.opengl.Matrix;
 import android.util.Log;
 
-import com.spx.library.util.GlUtil;
+import com.video.library.util.GlUtil;
 
 import static android.opengl.GLES11Ext.GL_TEXTURE_EXTERNAL_OES;
 import static android.opengl.GLES20.GL_ARRAY_BUFFER;

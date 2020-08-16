@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.opengl.GLES20;
 
-import com.daasuu.mp4compose.utils.GlUtils;
+import com.daasuu.mp4compose.utils.GLESUtils;
 
 /**
  * Created by sudamasayuki on 2018/03/12.
@@ -48,14 +48,14 @@ public class GlLutComposeFilter extends GlComposeFilter {
                     "}";
 
     public GlLutComposeFilter(Bitmap bitmap) {
-        super(GlUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
+        super(GLESUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
         this.lutTexture = bitmap;
         hTex = NO_TEXTURE;
     }
 
 
     public GlLutComposeFilter(Resources resources, int fxID) {
-        super(GlUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
+        super(GLESUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
         this.lutTexture = BitmapFactory.decodeResource(resources, fxID);
         hTex = NO_TEXTURE;
     }
@@ -65,7 +65,7 @@ public class GlLutComposeFilter extends GlComposeFilter {
     public void setUpSurface() {
         super.setUpSurface();
         if (hTex == NO_TEXTURE) {
-            hTex = GlUtils.loadTexture(lutTexture, NO_TEXTURE, false);
+            hTex = GLESUtils.loadTexture(lutTexture, NO_TEXTURE, false);
         }
 
     }

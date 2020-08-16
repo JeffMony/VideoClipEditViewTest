@@ -3,21 +3,17 @@ package com.daasuu.epf;
 import android.graphics.SurfaceTexture;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
-import android.opengl.Matrix;
 import android.util.Log;
 import android.view.Surface;
 
-import com.daasuu.epf.filter.GlFilter;
-import com.daasuu.epf.filter.GlLookUpTableFilter;
+import com.daasuu.epf.filter.*;
 import com.daasuu.epf.filter.GlPreviewFilter;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 
 import javax.microedition.khronos.egl.EGLConfig;
-import javax.microedition.khronos.opengles.GL10;
 
 import static android.opengl.GLES11Ext.GL_TEXTURE_EXTERNAL_OES;
 import static android.opengl.GLES20.GL_COLOR_BUFFER_BIT;
-import static android.opengl.GLES20.GL_LINEAR;
 import static android.opengl.GLES20.GL_MAX_TEXTURE_SIZE;
 import static android.opengl.GLES20.GL_NEAREST;
 import static android.opengl.GLES20.GL_TEXTURE_2D;

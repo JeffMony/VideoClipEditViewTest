@@ -4,7 +4,7 @@ import android.graphics.Point;
 import android.graphics.PointF;
 import android.opengl.GLES20;
 
-import com.daasuu.mp4compose.utils.GlUtils;
+import com.daasuu.mp4compose.utils.GLESUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -55,7 +55,7 @@ public class GlToneCurveComposeFilter extends GlComposeFilter {
 
 
     public GlToneCurveComposeFilter(InputStream input) {
-        super(GlUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
+        super(GLESUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
         PointF[] defaultCurvePoints = new PointF[]{new PointF(0.0f, 0.0f), new PointF(0.5f, 0.5f), new PointF(1.0f, 1.0f)};
         rgbCompositeControlPoints = defaultCurvePoints;
         redControlPoints = defaultCurvePoints;

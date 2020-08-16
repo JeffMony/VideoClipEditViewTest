@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.opengl.GLES20;
 
-import com.daasuu.mp4compose.utils.GlUtils;
+import com.daasuu.mp4compose.utils.GLESUtils;
 
 //OpenGL Lut filter using 512x512 color LUTs
 public class GlLut512ComposeFilter extends GlComposeFilter {
@@ -53,13 +53,13 @@ public class GlLut512ComposeFilter extends GlComposeFilter {
                     "}";
 
     public GlLut512ComposeFilter(Bitmap bitmap) {
-        super(GlUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
+        super(GLESUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
         this.lutTexture = bitmap;
         hTex = NO_TEXTURE;
     }
 
     public GlLut512ComposeFilter(Resources resources, int fxID) {
-        super(GlUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
+        super(GLESUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
         this.lutTexture = BitmapFactory.decodeResource(resources, fxID);
         hTex = NO_TEXTURE;
     }
@@ -68,7 +68,7 @@ public class GlLut512ComposeFilter extends GlComposeFilter {
     public void setUpSurface() {
         super.setUpSurface();
         if (hTex == NO_TEXTURE) {
-            hTex = GlUtils.loadTexture(lutTexture, NO_TEXTURE, false);
+            hTex = GLESUtils.loadTexture(lutTexture, NO_TEXTURE, false);
         }
     }
 

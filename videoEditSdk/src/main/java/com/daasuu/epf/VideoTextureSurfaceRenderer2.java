@@ -1,18 +1,16 @@
 package com.daasuu.epf;
 
-
 import android.content.Context;
 import android.graphics.*;
 import android.opengl.GLES11Ext;
 import android.opengl.GLES20;
-import android.opengl.GLES30;
 import android.opengl.GLUtils;
 import android.util.Log;
 
 import com.daasuu.epf.filter.GlFilter;
-import com.spx.library.player.mp.TextureSurfaceRenderer2;
-import com.spx.library.util.RawResourceReader;
-import com.spx.library.util.ShaderHelper;
+import com.video.library.player.mp.TextureSurfaceRenderer2;
+import com.video.library.util.RawResourceReader;
+import com.video.library.util.ShaderHelper;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

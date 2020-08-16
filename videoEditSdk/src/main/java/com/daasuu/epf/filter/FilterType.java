@@ -1,19 +1,10 @@
 package com.daasuu.epf.filter;
 
-
 import android.content.Context;
 import android.util.Log;
 
-import com.daasuu.epf.custfilter.Gl4SplitFilter;
-import com.daasuu.epf.custfilter.GlBeautyFilter;
-import com.daasuu.epf.custfilter.GlFlashFliter;
-import com.daasuu.epf.custfilter.GlHuanJueFliter;
-import com.daasuu.epf.custfilter.GlItchFilter;
-import com.daasuu.epf.custfilter.GlPngFliter;
-import com.daasuu.epf.custfilter.GlScaleFilter;
-import com.daasuu.epf.custfilter.GlShakeFilter;
-import com.daasuu.epf.custfilter.GlSoulOutFilter;
-import com.spx.egl.GLImageComplexionBeautyFilter;
+import com.daasuu.epf.custfilter.*;
+import com.video.egl.GLImageComplexionBeautyFilter;
 
 import java.io.IOException;
 import java.io.InputStream;

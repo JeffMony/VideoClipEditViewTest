@@ -5,8 +5,8 @@ import android.graphics.SurfaceTexture;
 import android.opengl.GLES11Ext;
 import android.opengl.GLES20;
 
-import com.daasuu.mp4compose.utils.GlUtils;
-import com.spx.library.util.GlUtil;
+import com.daasuu.mp4compose.utils.GLESUtils;
+import com.video.library.util.GlUtil;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -44,7 +44,7 @@ public class GlComposeFilter {
 
 
     public GlComposeFilter() {
-        this(GlUtils.DEFAULT_VERTEX_SHADER, GlUtils.DEFAULT_FRAGMENT_SHADER);
+        this(GLESUtils.DEFAULT_VERTEX_SHADER, GLESUtils.DEFAULT_FRAGMENT_SHADER);
     }
 
 //    public GlComposeFilter(final Resources res, final int vertexShaderSourceResId, final int fragmentShaderSourceResId) {
@@ -68,13 +68,13 @@ public class GlComposeFilter {
 
 
     public void draw(SurfaceTexture surfaceTexture, float[] STMatrix, float[] MVPMatrix) {
-        GlUtils.checkGlError("onDrawFrame start");
+        GLESUtils.checkGlError("onDrawFrame start");
 
 
         GLES20.glClearColor(clearColor[0], clearColor[1], clearColor[2], clearColor[3]);
         GLES20.glClear(GLES20.GL_DEPTH_BUFFER_BIT | GLES20.GL_COLOR_BUFFER_BIT);
         GLES20.glUseProgram(program);
-        GlUtils.checkGlError("glUseProgram");
+        GLESUtils.checkGlError("glUseProgram");
 
         GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
         GLES20.glBindTexture(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, textureID);
@@ -86,10 +86,10 @@ public class GlComposeFilter {
         triangleVertices.position(TRIANGLE_VERTICES_DATA_UV_OFFSET);
         GLES20.glVertexAttribPointer(getHandle("aTextureCoord"), 2, GLES20.GL_FLOAT, false,
                 TRIANGLE_VERTICES_DATA_STRIDE_BYTES, triangleVertices);
-        GlUtils.checkGlError("glVertexAttribPointer aTextureHandle");
+        GLESUtils.checkGlError("glVertexAttribPointer aTextureHandle");
 
         GLES20.glEnableVertexAttribArray(getHandle("aTextureCoord"));
-        GlUtils.checkGlError("glEnableVertexAttribArray aTextureHandle");
+        GLESUtils.checkGlError("glEnableVertexAttribArray aTextureHandle");
 
         surfaceTexture.getTransformMatrix(STMatrix);
 //
@@ -103,7 +103,7 @@ public class GlComposeFilter {
 
 
         GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
-        GlUtils.checkGlError("glDrawArrays");
+        GLESUtils.checkGlError("glDrawArrays");
 
         GLES20.glFinish();
     }
@@ -113,9 +113,9 @@ public class GlComposeFilter {
 
 
     public void setUpSurface() {
-        final int vertexShader = GlUtils.loadShader(vertexShaderSource, GLES20.GL_VERTEX_SHADER);
-        final int fragmentShader = GlUtils.loadShader(fragmentShaderSource, GLES20.GL_FRAGMENT_SHADER);
-        program = GlUtils.createProgram(vertexShader, fragmentShader);
+        final int vertexShader = GLESUtils.loadShader(vertexShaderSource, GLES20.GL_VERTEX_SHADER);
+        final int fragmentShader = GLESUtils.loadShader(fragmentShaderSource, GLES20.GL_FRAGMENT_SHADER);
+        program = GLESUtils.createProgram(vertexShader, fragmentShader);
         if (program == 0) {
             throw new RuntimeException("failed creating program");
         }
@@ -129,7 +129,7 @@ public class GlComposeFilter {
         GLES20.glGenTextures(1, textures, 0);
         textureID = textures[0];
         GLES20.glBindTexture(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, textureID);
-        GlUtils.checkGlError("glBindTexture textureID");
+        GLESUtils.checkGlError("glBindTexture textureID");
         GLES20.glTexParameterf(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, GLES20.GL_TEXTURE_MIN_FILTER,
                 GLES20.GL_LINEAR);
         GLES20.glTexParameterf(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, GLES20.GL_TEXTURE_MAG_FILTER,
@@ -138,7 +138,7 @@ public class GlComposeFilter {
                 GLES20.GL_CLAMP_TO_EDGE);
         GLES20.glTexParameteri(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, GLES20.GL_TEXTURE_WRAP_T,
                 GLES20.GL_CLAMP_TO_EDGE);
-        GlUtils.checkGlError("glTexParameter");
+        GLESUtils.checkGlError("glTexParameter");
     }
 
     protected final int getHandle(final String name) {

@@ -2,7 +2,7 @@ package com.daasuu.mp4compose.filter;
 
 import android.opengl.GLES20;
 
-import com.daasuu.mp4compose.utils.GlUtils;
+import com.daasuu.mp4compose.utils.GLESUtils;
 
 /**
  * Created by sudamasayuki on 2018/01/07.
@@ -43,7 +43,7 @@ public class GlSphereRefractionComposeFilter extends GlComposeFilter {
     private float refractiveIndex = 0.71f;
 
     public GlSphereRefractionComposeFilter() {
-        super(GlUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
+        super(GLESUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
     }
 
     public void setCenterX(float centerX) {

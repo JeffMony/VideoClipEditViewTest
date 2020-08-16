@@ -12,7 +12,7 @@ import static android.media.MediaExtractor.SEEK_TO_PREVIOUS_SYNC;
 
 
 // Refer: https://github.com/ypresto/android-transcoder/blob/master/lib/src/main/java/net/ypresto/androidtranscoder/engine/PassThroughTrackTranscoder.java
-class AudioComposer implements IAudioComposer {
+public class AudioComposer implements IAudioComposer {
     private final MediaExtractor mediaExtractor;
     private final int trackIndex;
     private final MuxRender muxRender;

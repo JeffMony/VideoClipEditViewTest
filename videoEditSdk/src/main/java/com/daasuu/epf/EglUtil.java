@@ -7,6 +7,8 @@ import android.opengl.GLException;
 import android.opengl.GLUtils;
 import android.util.Log;
 
+import com.daasuu.mp4compose.utils.GLESUtils;
+
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
@@ -24,7 +26,6 @@ import static android.opengl.GLES20.GL_TEXTURE_WRAP_S;
 import static android.opengl.GLES20.GL_TEXTURE_WRAP_T;
 import static android.opengl.GLES20.GL_TRUE;
 import static android.opengl.GLES20.glCreateProgram;
-import static com.daasuu.mp4compose.utils.GlUtils.checkGlError;
 
 /**
  * Created by sudamasayuki on 2017/05/16.
@@ -53,7 +54,7 @@ public class EglUtil {
     public static int createProgram(final int vertexShader, final int pixelShader) throws GLException {
         final int program = glCreateProgram();
         Log.d(TAG, "createProgram: ...program:"+program, new RuntimeException("sssss"));
-        checkGlError("createProgram");
+        GLESUtils.checkGlError("createProgram");
         if (program == 0) {
             throw new RuntimeException("Could not create program");
         }

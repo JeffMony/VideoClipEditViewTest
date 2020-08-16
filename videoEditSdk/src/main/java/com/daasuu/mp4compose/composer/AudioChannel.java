@@ -105,7 +105,7 @@ class AudioChannel {
             overflowBuffer.data.clear().flip();
         }
 
-        filledBuffers.add(buffer);
+        filledBuffers.offer(buffer);
     }
 
     boolean feedEncoder(long timeoutUs) {
@@ -131,7 +131,7 @@ class AudioChannel {
             return true;
         }
 
-        final AudioBuffer inBuffer = filledBuffers.poll();
+        final AudioBuffer inBuffer = (AudioBuffer) filledBuffers.poll();
         if (inBuffer.bufferIndex == BUFFER_INDEX_END_OF_STREAM) {
             encoder.queueInputBuffer(encoderInBuffIndex, 0, 0, 0, MediaCodec.BUFFER_FLAG_END_OF_STREAM);
             return false;

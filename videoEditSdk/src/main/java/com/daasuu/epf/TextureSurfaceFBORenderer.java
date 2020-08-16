@@ -1,10 +1,9 @@
 package com.daasuu.epf;
 
-import android.graphics.SurfaceTexture;
 import android.opengl.GLES20;
 
 import com.daasuu.epf.filter.GlFilter;
-import com.spx.library.player.mp.TextureSurfaceRenderer;
+import com.video.library.player.mp.TextureSurfaceRenderer;
 
 import javax.microedition.khronos.egl.EGLConfig;
 

@@ -46,7 +46,6 @@
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
 
 -dontoptimize
--microedition
 
 -dontwarn android.os.**
 -dontwarn java.nio.file.**
@@ -380,7 +379,6 @@ public static final int *;
 #=============================================================================
 
 # 华为Push服务
--ignorewarning
 -keepattributes *Annotation*
 -keepattributes Exceptions
 -keepattributes InnerClasses

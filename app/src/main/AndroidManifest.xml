@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.spx.videoclipeditviewtest">
+    package="com.video.edit.demo">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -24,18 +24,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.video.edit.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DecodeActivity" />
-        <activity android:name=".VideoClipActivity"></activity>
-        <activity android:name=".VideoEditActivity"></activity>
-        <activity android:name=".VideoProgressActivity"></activity>
-        <activity android:name=".CameraEffectActivity"></activity>
+        <activity android:name="com.video.edit.activity.DecodeActivity" />
+        <activity android:name="com.video.edit.activity.VideoClipActivity"></activity>
+        <activity android:name="com.video.edit.activity.VideoEditActivity"></activity>
+        <activity android:name="com.video.edit.activity.VideoProgressActivity"></activity>
+        <activity android:name="com.video.edit.activity.CameraEffectActivity"></activity>
     </application>
 
 </manifest>

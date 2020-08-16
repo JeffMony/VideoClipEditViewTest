@@ -1,6 +1,6 @@
 package com.daasuu.mp4compose.filter;
 
-import com.daasuu.mp4compose.utils.GlUtils;
+import com.daasuu.mp4compose.utils.GLESUtils;
 
 /**
  * Created by sudamasayuki on 2017/11/14.
@@ -20,7 +20,7 @@ public class GlSepiaComposeFilter extends GlComposeFilter {
                     "}";
 
     public GlSepiaComposeFilter() {
-        super(GlUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
+        super(GLESUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
     }
 
 }

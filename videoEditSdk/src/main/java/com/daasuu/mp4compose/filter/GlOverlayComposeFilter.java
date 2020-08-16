@@ -6,8 +6,8 @@ import android.graphics.Color;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
 
-import com.spx.egl.Resolution;
-import com.daasuu.mp4compose.utils.GlUtils;
+import com.video.egl.Resolution;
+import com.daasuu.mp4compose.utils.GLESUtils;
 
 /**
  * Created by sudamasayuki on 2018/01/07.
@@ -22,7 +22,7 @@ public abstract class GlOverlayComposeFilter extends GlComposeFilter implements 
     protected Resolution inputResolution = new Resolution(720, 1280);
 
     public GlOverlayComposeFilter() {
-        super(GlUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
+        super(GLESUtils.DEFAULT_VERTEX_SHADER, FRAGMENT_SHADER);
     }
 
     public final static String FRAGMENT_SHADER =

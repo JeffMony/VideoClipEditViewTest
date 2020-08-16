@@ -12,7 +12,7 @@ import java.util.List;
 
 // Refer: https://github.com/ypresto/android-transcoder/blob/master/lib/src/main/java/net/ypresto/androidtranscoder/engine/QueuedMuxer.java
 
-class MuxRender {
+public class MuxRender {
     private static final String TAG = "MuxRender";
     private static final int BUFFER_SIZE = 64 * 1024; // I have no idea whether this value is appropriate or not...
     private final MediaMuxer muxer;
