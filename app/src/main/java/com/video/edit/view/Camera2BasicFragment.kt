@@ -33,8 +33,6 @@ import com.video.epf.EPlayerRenderer
 import com.video.edit.filter.MyPreviewFilter
 import com.video.edit.filter.MyRenderer
 import com.video.edit.filter.ShaderUtil
-import com.video.edit.ext.createFilterOptions
-import com.video.edit.ext.getFilterByName
 import com.video.edit.ext.getInt
 import kotlinx.android.synthetic.main.fragment_camera2_basic.*
 
@@ -47,6 +45,7 @@ import java.util.concurrent.TimeUnit
 
 import com.video.edit.demo.R;
 import com.video.edit.activity.VideoEditActivity
+import com.video.edit.ext.FilterConfigs
 
 /**
  * 这份代码很简陋, 是在谷歌camera2示例代码基础上修改的
@@ -209,9 +208,9 @@ class Camera2BasicFragment : androidx.fragment.app.Fragment(), ActivityCompat.On
 
     private fun showFilterDialog() {
         var dialogFragment = BottomDialogFragment.getInstance(0, getSelection(),
-                "选择滤镜", createFilterOptions())
+                "选择滤镜", FilterConfigs.createFilterOptions())
         dialogFragment.setSelectionCallBack { selection, option ->
-            val filter = getFilterByName(option.optionName, requireContext())
+            val filter = FilterConfigs.getFilterByName(option.optionName, requireContext())
             Log.d(VideoEditActivity.TAG, "selection:$selection, filter:$filter")
             eRenderer.setGlFilter(filter)
 //            glFilterList.putGlFilter(GlFilterPeriod(0, mediaDuration, filter))

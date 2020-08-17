@@ -211,7 +211,7 @@ class VideoEditActivity : AppCompatActivity() {
 
 
     private fun beginOneEffect(option: BottomDialogFragment.Option) {
-        val filter = getEffectFilterByName(option.optionName, applicationContext)
+        val filter = EffectConfigs.getEffectFilterByName(option.optionName, applicationContext)
         Log.d(TAG, "beginOneEffect option:${option.optionName}  effectStartTime:$effectStartTime, filter:$filter")
 
         effectFilterPeriod = player_view_mp.addFiler(effectStartTime, mediaDuration, filter)
@@ -240,7 +240,7 @@ class VideoEditActivity : AppCompatActivity() {
         recyclerview.visibility = View.VISIBLE
         iv_effect_framebar.visibility = View.VISIBLE
 
-        var options = createEffectOptions()
+        var options = EffectConfigs.createEffectOptions()
 
         hs_effect_list.visibility = View.VISIBLE
 
@@ -276,9 +276,9 @@ class VideoEditActivity : AppCompatActivity() {
 
     private fun showFilterDialog() {
         var dialogFragment = BottomDialogFragment.getInstance(0, getSelection(),
-                "选择滤镜", createFilterOptions())
+                "选择滤镜", FilterConfigs.createFilterOptions())
         dialogFragment.setSelectionCallBack { selection, option ->
-            val filter = getFilterByName(option.optionName, applicationContext)
+            val filter = FilterConfigs.getFilterByName(option.optionName, applicationContext)
             Log.d(TAG, "selection:$selection, filter:$filter")
             player_view_mp.setFiler(0, mediaDuration, filter)
 //            glFilterList.putGlFilter(GlFilterPeriod(0, mediaDuration, filter))
